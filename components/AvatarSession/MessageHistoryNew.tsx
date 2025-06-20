@@ -143,7 +143,7 @@ export const MessageHistory: React.FC<MessageHistoryProps> = ({ className }) => 
       className={`${isFullScreen ? "fixed inset-0 z-50 bg-zinc-900" : "h-[440px] max-h-[440px]"} flex flex-col rounded-xl ${className}`}
     >
       {/* Action buttons */}
-      <div className="flex justify-end gap-2 p-2 bg-zinc-800 rounded-t-xl">
+      <div className="flex justify-end gap-2 p-2 bg-zinc-800 rounded-t-xl h-12 flex-shrink-0">
         <button
           onClick={handleToggleFullScreen}
           className="px-3 py-1 text-xs bg-zinc-600 hover:bg-zinc-500 rounded text-white"
