@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom colors */
+:root {
+  --gradient-start: #000000;
+  --gradient-end: #121212;
+  --gold-primary: #ffd700;
+  --gold-secondary: #ffed4a;
+  --accent-dark: #1e1e1e;
+  --accent-light: #2d2d2d;
+
+  /* Slightly darker button gradient */
+  --btn-gradient-start: #5948e8;
+  --btn-gradient-end: #8e3fd3;
+}
+
+/* Global body styling */
+body {
+  @apply transition-colors duration-300;
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+/* Button styles */
+.btn {
+  @apply bg-gradient-to-r from-[#5948e8] to-[#8e3fd3] text-white font-semibold rounded-lg px-6 py-3 transition-all duration-300 shadow-md hover:scale-105 hover:shadow-xl hover:ring-2 hover:ring-[#8e3fd3]/70;
+}
+
+button:active, .btn:active {
+  @apply transform scale-95;
+}
+
+/* Card styles */
+.card {
+  @apply bg-[#1a1a1a]/90 backdrop-blur-sm border border-[#333333] rounded-xl p-6 shadow-xl;
+}
+
+/* Input styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @apply bg-[#2d2d2d] text-white border border-[#333333] rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#ffd700]/50 transition-all duration-200;
+}
+
+/* List styles */
+li {
+  @apply list-disc ml-6 py-1 text-[#e0e0e0];
+}
+
+/* Scoped heading styles (apply gold only in hero section) */
+.hero-title {
+  @apply text-[#ffd700] font-bold;
+}
+
+/* Optional: reset default heading color */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-white;
+}
+
+/* Link styles */
+a {
+  @apply text-[#ffd700] hover:text-[#ffed4a] transition-colors duration-200;
+}
