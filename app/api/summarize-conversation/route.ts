@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Conversation text is required" }, { status: 400 });
     }
 
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
+    const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY!);
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     // --- Parsing and Selective Summarization Logic ---

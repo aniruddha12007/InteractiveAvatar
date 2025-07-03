@@ -57,7 +57,7 @@ function InteractiveAvatar({ onTestComplete, onConversationUpdate }: { onTestCom
 
   async function fetchAccessToken() {
     try {
-      const response = await fetch("/api/get-access-token", {
+      const response = await fetch("/app/api/get-access-token", {
         method: "POST",
       });
       const token = await response.text();
@@ -234,7 +234,7 @@ export default function InteractiveAvatarWrapper({ onTestComplete }: { onTestCom
     <div className="pt-16">
       <AINavbar onGenerateMCQ={handleGenerateMCQ} showGenerate={!showMCQ && !!conversationText} />
       <div className={`relative ${showMCQ ? 'blur-sm' : ''}`}>
-        <StreamingAvatarProvider basePath={process.env.NEXT_PUBLIC_BASE_API_URL}>
+        <StreamingAvatarProvider basePath={process.env.NEXT_PUBLIC_NEXT_PUBLIC_BASE_API_URL}>
           <InteractiveAvatar 
             onTestComplete={onTestComplete} 
             onConversationUpdate={setConversationText}

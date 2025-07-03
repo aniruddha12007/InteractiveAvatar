@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 const CACHE_DURATION_MS = 60_000; // 1 minute
 const cache = new Map<string, { images: any[]; timestamp: number }>();
 
-const RAPID_KEY = process.env.RAPIDAPI_KEY!;
+const RAPID_KEY = process.env.NEXT_PUBLIC_RAPIDAPI_KEY!;
 const RAPID_ENDPOINT = "https://real-time-image-search.p.rapidapi.com/search";
 
 export async function POST(req: NextRequest) {
