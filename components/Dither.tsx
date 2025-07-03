@@ -144,10 +144,10 @@ class RetroEffectImpl extends Effect {
     // @ts-ignore
     this.uniforms = uniforms;
   }
-  set colorNum(v: number) { this.uniforms.get("colorNum").value = v; }
-  get colorNum(): number { return this.uniforms.get("colorNum").value; }
-  set pixelSize(v: number) { this.uniforms.get("pixelSize").value = v; }
-  get pixelSize(): number { return this.uniforms.get("pixelSize").value; }
+  set colorNum(v: number) { this.uniforms.get("colorNum")!.value = v; }
+  get colorNum(): number { return this.uniforms.get("colorNum")!.value; }
+  set pixelSize(v: number) { this.uniforms.get("pixelSize")!.value = v; }
+  get pixelSize(): number { return this.uniforms.get("pixelSize")!.value; }
 }
 const WrappedRetro = wrapEffect(RetroEffectImpl);
 
