@@ -209,7 +209,7 @@ function InteractiveAvatar({ onTestComplete, onConversationUpdate }: { onTestCom
           </div>
           {sessionState === StreamingAvatarSessionState.CONNECTED && (
             <div className="flex flex-col rounded-xl bg-slate-800/50 border border-slate-700 overflow-hidden w-full md:w-1/3 h-[800px]">
-              <MessageHistory className="flex-1 h-[440px]" summary={currentSummary} />
+              <MessageHistory className="h-full" summary={currentSummary} />
             </div>
           )}
         </div>
